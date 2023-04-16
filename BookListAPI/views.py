@@ -23,3 +23,8 @@ class BookList(APIView):
 
     def post(self, request):
         return Response({"title": request.data.get("title")}, status.HTTP_201_CREATED)
+
+
+class Book(APIView):
+    def get(self, request, pk):
+        return Response({"message": f"single book with id {pk}"}, status.HTTP_200_OK)
