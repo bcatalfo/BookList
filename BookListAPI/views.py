@@ -14,6 +14,11 @@ def books(request):
 
 class BookList(APIView):
     def get(self, request):
+        author = request.GET.get("author")
+        if author:
+            return Response(
+                {"message": f"list of books by: {author}"}, status.HTTP_200_OK
+            )
         return Response({"message": "list of the books"}, status.HTTP_200_OK)
 
     def post(self, request):
