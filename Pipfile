@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 pyright = "*"
 django-types = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 
